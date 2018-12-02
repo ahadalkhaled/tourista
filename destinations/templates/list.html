@@ -4,13 +4,47 @@
 
 {% block content %}
 <br>
+ <h1 class="listtitle">Choose Your Next Holiday Destination Here!</h1>
 <div class="row">
   {% for destination in destinations %}
-  <a href="{% url 'destination-detail' destination.id %}">
-    <img src="{{destination.pretty_picture.url}}" />
-    <p>{{destination.name}}</p>
-    <p>{{destination.activities}}</p>
-  </a>
+
+ <div class="col-12 col-md-6 col-lg-6">
+ 	<div class="card" style="width: 30rem;">
+  <img class="card-img-top" src="{{destination.pretty_picture.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title titlefont detailtitle">{{destination.name}}</h5>
+    <p class="card-text">Activities: {{destination.activities}}</p>
+    <a href="{% url 'destination-detail' destination.id %}" class="btn btn-outline-success">Learn More</a>
+  </div>
+</div>
+  
+<!--   <a href="{% url 'destination-detail' destination.id %}">
+    <div class="card bg-dark text-white">
+  <img class="card-img" src="{{destination.pretty_picture.url}}" alt="Card image">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{destination.name}}</h5>
+    <p class="card-text text">Activities: {{destination.activities}}</p>
+    <a href="#" class="card-link">Update</a>
+    <a href="#" class="card-link">Create</a> -->
+<!--   </div>
+</div> -->
+ <!--  </a> -->
+</div>
   {% endfor %}
 </div>
 {% endblock content %}
+
+
+
+<!-- <img src="{{destination.pretty_picture.url}}" />
+    <p>{{destination.name}}</p>
+    <p>Activities: {{destination.activities}}</p> -->
+
+<!--     <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{destination.pretty_picture.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{destination.name}}</h5>
+    <p class="card-text">Activities: {{destination.activities}}</p> -->
+  <!--   <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> -->

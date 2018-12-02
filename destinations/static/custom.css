@@ -1,0 +1,43 @@
+.text{
+	color: white;
+	font-size: 30px;
+}
+
+p {
+	font-family: Ariel;
+	font-size: 30px;
+
+/*
+body{
+    background-image: url("backgroundimg.jpg");*/
+}
+
+body{
+	background-color: lightblue;
+}
+
+.titlefont{
+	font-family: Ariel;
+	font-size: 40px;
+}
+
+.listtitle{
+	color: green;
+	font-size: 80px
+	background-color: white;
+}
+
+.margins{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.detailtitle{
+	font-size: 50px;
+	color: green;
+}
+
+.navbaredits{
+	color: green;
+	font-size: 100px;
+}
